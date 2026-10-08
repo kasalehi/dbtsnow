@@ -1,0 +1,11 @@
+version: 2
+snapshots:
+  - name: dim_customers
+    description: "This is the snapshot for customers table"
+    config:
+      target_database: dev
+      target_schema: mart
+      unique_key: customer_id
+      strategy: timestamp
+      updated_at: signup_date
+  
