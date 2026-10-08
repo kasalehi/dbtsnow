@@ -13,4 +13,4 @@ select
     total_amount,
     status
 from {{ ref('stg_orders') }}
-where quantity >= 2
+where quantity >= 5
