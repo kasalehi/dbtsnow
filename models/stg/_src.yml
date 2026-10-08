@@ -1,0 +1,13 @@
+-- lets define source yaml for stage tables 
+
+version: 2
+sources:
+  - name: stg
+    description: "This is the source for stage tables"
+    database: dev
+    schema: stg
+    tables:
+      - name: orders
+        description: "This is the source for stage orders table"
+      - name: customers
+        description: "This is the source for stage customers table"
