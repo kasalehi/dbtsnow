@@ -8,5 +8,5 @@ snapshots:
       alias: dim_customers
       strategy: timestamp
       unique_key: customer_id
-      check_cols: [signup_date]
+      updated_at: signup_date
       hard_deletes: ignore

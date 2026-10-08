@@ -18,8 +18,7 @@ select
     payment_method,
     total_amount,
     status
-from {{ source('stg', 'stg_orders') }}
-
+from {{ source('stg', 'orders') }}
 {% if is_incremental() %}
 where order_date >= (
     select dateadd(day, -3, max(order_date)) from {{ this }}
