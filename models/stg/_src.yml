@@ -1,6 +1,4 @@
--- lets define source yaml for stage tables 
 
-version: 2
 sources:
   - name: stg
     description: "This is the source for stage tables"
