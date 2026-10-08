@@ -1,11 +1,12 @@
-version: 2
 snapshots:
   - name: dim_customers
-    description: "This is the snapshot for customers table"
+    relation: source('stg', 'customers')
+    description:  "Snapshot of the customers table"
     config:
-      target_database: dev
-      target_schema: mart
-      unique_key: customer_id
+      database: dev
+      schema: mart
+      alias: dim_customers
       strategy: timestamp
-      updated_at: signup_date
-  
+      unique_key: customer_id
+      check_cols: [signup_date]
+      hard_deletes: ignore
